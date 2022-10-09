@@ -1,0 +1,81 @@
+.motto {
+  margin: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--motto-back-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0)),
+    url(../images/motto/moto-mobile/moto@1x.jpg);
+  text-align: center;
+  background-size: cover;
+
+  @include tablet {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0)
+      ),
+      url(../images/motto/moto-tablet/moto@1x.jpg);
+  }
+  @include desktop {
+    max-width: 1600px;
+    padding: 200px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0)
+      ),
+      url(../images/motto/moto-desktop/moto@1x.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/motto/moto-mobile/moto@2x.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/motto/moto-tablet/moto@2x.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/motto/moto-desktop/moto@2x.jpg);
+  }
+}
+
+.motto__title {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: calc(42 / 26);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--regular-white);
+
+  @include desktop {
+    font-size: 44px;
+    width: 700px;
+    max-width: none;
+    line-height: calc(60 / 44);
+  }
+}
