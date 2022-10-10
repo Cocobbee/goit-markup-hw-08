@@ -94,9 +94,7 @@ a {
 }
 
 .clients__item {
-  width: 41%;
   height: 92px;
-  max-width: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,6 +104,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
 }
 @media screen and (min-width: 768px) {
   .clients__item {
@@ -608,8 +608,7 @@ a {
 }
 
 .portfolio-box {
-  padding: 20px 24px;
-  padding-right: 0;
+  padding: 24px 20px;
   border: 1px solid var(--border-frame);
   border-top: none;
 }
@@ -851,8 +850,8 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .contact-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .contact-link:hover, .contact-link:focus {
@@ -863,6 +862,9 @@ a {
   margin-right: 10px;
   -webkit-transition: fill 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function);
+}
+.contact-icon:hover, .contact-icon:focus {
+  fill: var(--sky);
 }
 
 .container {
@@ -1207,7 +1209,7 @@ a {
 }
 
 .permission {
-  font-size: 7px;
+  font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
   color: var(--text-grey);
@@ -1554,8 +1556,13 @@ a {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .menu-navigation__link.current {
+  color: var(--sky);
+}
+.menu-navigation__link:focus, .menu-navigation__link:hover {
   color: var(--sky);
 }
 
@@ -1596,26 +1603,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
 }
 
-.social-menu__item {
-  position: relative;
-}
-
-.social-menu__item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: rgba(33, 33, 33, 0.2);
+.social-menu__item:not(:last-child) {
+  border-right: solid 1px rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .social-menu__link {
   font-weight: 500;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: var(--sky);

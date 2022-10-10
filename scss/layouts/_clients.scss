@@ -1,6 +1,3 @@
-.clients {
-}
-
 .clients__title {
   margin-bottom: 50px;
   font-size: 28px;
@@ -8,6 +5,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
   @include desktop {
     font-size: 36px;
     line-height: calc(42 / 36);
@@ -23,16 +21,17 @@
 }
 
 .clients__item {
-  width: 41%;
-  height: 92px;
-  max-width: 210px;
+    height: 92px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: calc((100% - 30%) / 2);
+
   @include tablet {
     max-width: none;
     width: 226px;
   }
+
   @include desktop {
     width: 170px;
   }
